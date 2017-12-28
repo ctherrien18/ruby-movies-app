@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MovieProject</title>
+    <%= csrf_meta_tags %>
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      
+      
+    <style>
+        body {margin:0;}
+
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        .topnav a {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+          text-decoration: none;
+        }
+
+        .topnav a.active {
+          background-color: #4CAF50;
+          color: white;
+        }
+   </style>
+</head>
+
+
+  <body>
+    <div class="topnav">
+      <%= link_to 'Search For Movies', root_path %>  
+      <%= link_to 'Users', users_path %>  
+      <%= link_to 'Top Movies', sortedMovies_path %>
+    </div>
+      
+    <%= yield %>
+  </body>
+</html>
